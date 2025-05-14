@@ -23,7 +23,6 @@
 
 body{
     font-size: 1.6rem;
-    
     padding: 3.2rem;
     background: var(--background-primary);
 }
@@ -40,6 +39,56 @@ header{
         width: 15.4rem;
         margin-inline: auto;
         margin-bottom: 3rem;
+    }
+
+    button{
+        border: none;
+        background: none;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 1.6rem;
+        color: var(--color-brand);
+        cursor: pointer;
+    }
+
+    h1{
+        font-size: 2.4rem;
+        color:var(--content-primary);
+        line-height: 3.2rem;
+
+    }
+}
+
+main{
+    max-width: 62.7rem;
+    margin-inline: auto;
+}
+
+.add-item{
+    margin-bottom: 4rem;
+
+    input{
+        width: 100%;
+        padding: 1.2rem;
+        border: 2px solid var(--border-primary);
+        border-radius: 1.2rem;
+        margin-bottom: 1.6rem;
+        outline: none;
+        color: var(--content-primary);
+
+        &::placeholder{
+            color: var(--content-tertiary);
+        }
+
+        &::hover{
+            border: 2px solid var(--border-hover);
+            cursor: pointer;
+        }
+        &:focus {
+            border: 2px solid var(--color-brand);
+
+        }
     }
 
     button{
@@ -158,3 +207,27 @@ header{
     opacity: 0;
     transform: translateY(-10px);
 }
+
+
+@media(min-width: 627px){
+header{
+    img{
+        margin-top: 6.4rem;
+    }
+}
+
+.add-item{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1.6rem;
+
+    input{
+        margin-bottom: 0;
+        grid-column: 1 / 8;
+    }
+
+    button{
+        grid-column: 8 / 11;
+    }
+}
+ }
