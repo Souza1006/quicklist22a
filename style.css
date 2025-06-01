@@ -141,6 +141,12 @@ main{
         input{
             display: none;
         }
+
+        label {
+            cursor: pointer;
+          }
+
+
         div:has(input:checked){
             .custom-checkbox{
                 background: var(--color-brand);
@@ -207,7 +213,6 @@ main{
     opacity: 0;
     transform: translateY(-10px);
 }
-
 
 @media(min-width: 627px){
 header{
