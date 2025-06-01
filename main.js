@@ -33,6 +33,7 @@ function showItemsList() {
         <div>
             <input type="checkbox" name="list" id="item-${index}" ${item.checked == true ? "checked" : ""}> 
             <div class="custom-checkbox">
+            <div class="custom-checkbox" onclick="checkItem('${itemName})">
                 <img src="./assests/assets/checked.svg" alt="checked">
             </div>
             <label for="item-${index}" onclick="checkItem('${item.name}')">${item.name}</label>
@@ -52,7 +53,7 @@ function removeItem(itemName) {
     const divWarning = document.querySelector(".warning")
 
     divWarning.classList.remove("hide-warning")
-}
+
     setTimeout(() => {
       divWarning.classList.add("hide-warning")
     }, 4000)
