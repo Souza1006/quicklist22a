@@ -32,7 +32,6 @@ function showItemsList() {
             </div>
             <label for="item-${index}" onclick="checkItem('${item.name}')">${item.name}</label>
         </div>
-        <button>
         <button onclick="removeItem('${item.name}')">
             <img src="./assests/assets/trash-icon.svg" alt="lixo">
         </button>
@@ -43,18 +42,19 @@ function showItemsList() {
 } 
 
 
-function checkItem(itemName) {
-    const item = items.find((item) => item.name === itemName)
-    item.checked = !item.checked
-    showItemsList()
-  }
 
-  function removeItem(itemName) {
+
     const itemIndex = items.findIndex((item) => item.name === itemName)
+    const divWarning = document.querySelector(".warning")
   
+    divWarning.classList.remove("hide-warning")
+  
+    setTimeout(() => {
+      divWarning.classList.add("hide-warning")
+    }, 4000)
+
     if (itemIndex !== -1) {
       items.splice(itemIndex, 1)
     }
-  
+
     showItemsList()
-  }
