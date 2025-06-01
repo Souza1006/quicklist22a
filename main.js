@@ -32,18 +32,19 @@ function showItemsList() {
          <div class="item">
         <div>
             <input type="checkbox" name="list" id="item-${index}" ${item.checked == true ? "checked" : ""}> 
-            <div class="custom-checkbox" onclick="checkItem('${itemName})">
             <div class="custom-checkbox" >
-                <img src="./assests/assets/checked.svg" alt="checked">
+                <img src="./assets/checked.svg" alt="checked">
             </div>
             <label for="item-${index}" onclick="checkItem('${item.name}')">${item.name}</label>
         </div>
         <button onclick="removeItem('${item.name}')">
-            <img src="./assests/assets/trash-icon.svg" alt="lixo">
+            <img src="./assets/trash-icon.svg" alt="lixo">
         </button>
     </div> `
 
     })
+
+    localStorage.setItem("items", JSON.stringify(items))
 
 } 
 
@@ -68,3 +69,15 @@ function removeItem(itemName) {
   function addHideWarningClass(){
     document.querySelector(".warning").classList.add("hide-warning")
   }
+  
+
+  function verifyLocalStorageItems() {
+    const localStorageItems = localStorage.getItem("items")
+
+    if (localStorageItems) {
+        items = JSON.parse(localStorageItems)
+        showItemsList()
+    }
+}
+
+verifyLocalStorageItems()
