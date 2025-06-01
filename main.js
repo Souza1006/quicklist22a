@@ -1,4 +1,3 @@
-const item = []
 const items = []
 
 function addItem() {
@@ -13,10 +12,8 @@ function addItem() {
 
     document.querySelector("#item").value = ""
 
-    console.log(items)
-}
     showItemsList()
-
+}
 
 function showItemsList() {
     const sectionList = document.querySelector(".list")
@@ -30,10 +27,12 @@ function showItemsList() {
          <div class="item">
         <div>
             <input type="checkbox" name="list" id="item-${index}"> 
+            <input type="checkbox" name="list" id="item-${index}" ${item.checked == true ? "checked" : ""}> 
             <div class="custom-checkbox">
                 <img src="./assests/assets/checked.svg" alt="checked">
             </div>
             <label for="item-${index}">${item.name}</label>
+            <label for="item-${index}" onclick="checkItem('${item.name}')">${item.name}</label>
         </div>
         <button>
             <img src="./assests/assets/trash-icon.svg" alt="lixo">
@@ -49,4 +48,4 @@ function checkItem(itemName) {
     const item = items.find((item) => item.name === itemName)
     item.checked = !item.checked
     showItemsList()
-  }
+}
