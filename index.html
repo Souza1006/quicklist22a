@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>More actions
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,14 +17,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="./main.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <title> QuickList - Lucas</title>
+    
+    <title> QuickList - Gabriel Pegozzi </title>
 </head>
 <body>
 
 <header>
 
-    <img src="./assests/assets/logo.png" alt="logo QuickList">
+    <img src="./assets/logo.png" alt="logo QuickList">
 
     <button>
         <i class="ph ph-arrow-left"></i>
@@ -40,6 +42,7 @@
     <section class="add-item">
         <input type="text" placeholder="Adicione um novo item" id="item">
         <button>Adionar item</button>
+        <button onclick="addItem()">Adionar item</button>
 
     </section>
 
@@ -49,40 +52,39 @@
         <div>
             <input type="checkbox" name="list" id="item-1"> 
             <div class="custom-checkbox">
-                <img src="./assests/assets/checked.svg" alt="checked">
+                <img src="./assets/checked.svg" alt="checked">
             </div>
             <label for="item-1">Pao de forma</label>
         </div>
         <button>
-            <img src="./assests/assets/trash-icon.svg" alt="lixo">
+            <img src="./assets/trash-icon.svg" alt="lixo">
         </button>
     </div> 
     <div class="item">
         <div>
             <input type="checkbox" name="list" id="item-2"> 
             <div class="custom-checkbox">
-                <img src="./assests/assets/checked.svg" alt="checked">
+                <img src="./assets/checked.svg" alt="checked">
             </div>
             <label for="item-1">Cafe</label>
         </div>
         <button>
-            <img src="./assests/assets/trash-icon.svg" alt="lixo">
+            <img src="./assets/trash-icon.svg" alt="lixo">
         </button>
     </div> <div class="item">
         <div>
             <input type="checkbox" name="list" id="item-3"> 
             <div class="custom-checkbox">
-                <img src="./assests/assets/checked.svg" alt="checked">
+                <img src="./assets/checked.svg" alt="checked">
             </div>
             <label for="item-1">Leite</label>
         </div>
         <button>
-            <img src="./assests/assets/trash-icon.svg" alt="lixo">
+            <img src="./assets/trash-icon.svg" alt="lixo">
         </button>
 
 </section>
 
-<div class="warning">
 <div class="warning ">
     <div>
         <i class="ph ph-warning-circle ph-fill"></i>
