@@ -3,6 +3,11 @@ const items = []
 function addItem() {
     const itemName = document.querySelector("#item").value
 
+    if (itemName === ""){
+        alert("Digite um item valido!")
+        return
+    }
+
     const item = {
         name: itemName,
         checked: false
@@ -42,13 +47,12 @@ function showItemsList() {
 } 
 
 
-
-
+function removeItem(itemName) {
     const itemIndex = items.findIndex((item) => item.name === itemName)
     const divWarning = document.querySelector(".warning")
-  
+
     divWarning.classList.remove("hide-warning")
-  
+}
     setTimeout(() => {
       divWarning.classList.add("hide-warning")
     }, 4000)
